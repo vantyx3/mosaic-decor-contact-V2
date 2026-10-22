@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>موزاييك ديكور | تواصل معنا</title>
 <meta name="theme-color" content="#33373A">
-<meta name="color-scheme" content="only light">
-<meta name="supported-color-schemes" content="light">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
 <meta name="darkreader-lock">
 <style>
   @font-face{font-family:"El Messiri";src:url("assets/ElMessiri.ttf") format("truetype");font-weight:400 700;font-display:swap}
   @font-face{font-family:"Hacen";src:url("assets/Hacen.ttf") format("truetype");font-weight:400;font-display:swap}
 
   :root{
-    color-scheme:only light;
+    color-scheme:light dark;
     --text:#33373A;
     --btn:#33373A;
     --sheet:#FFFFFF;
@@ -29,7 +29,7 @@
     --wash:#F4F4F3;
   }
   *{box-sizing:border-box;margin:0}
-  html{-webkit-text-size-adjust:100%;color-scheme:only light;background:#fff}
+  html{-webkit-text-size-adjust:100%;background:#fff}
   body{
     font-family:"Hacen","El Messiri",system-ui,sans-serif;
     color:var(--ink);background:var(--paper);line-height:1.6;
@@ -108,12 +108,24 @@
   .sheet a.wa{background:var(--gold);color:#2A1D07}
   .sheet button{background:transparent;color:var(--muted);border:1px solid var(--line)}
   .sheet svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  /* الصفحة تعلن دعم الوضع الداكن لكن ألوانها فاتحة دائماً (تمنع تعتيم المتصفح) */
+  @media (prefers-color-scheme:dark){
+    :root{
+      color-scheme:light dark;
+      --ink:#232628;--text:#33373A;--muted:#6A6F73;--line:#E6E4DF;
+      --paper:#FFFFFF;--btn:#33373A;--sheet:#FFFFFF;--hover:#9C6A1E;
+    }
+    html,body{background:#fff;color:#232628}
+    .hero{background-color:#fff}
+    dialog.sheet{background:#fff;color:#232628}
+    .sheet button{background:#fff}
+  }
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <img src="assets/logo.svg" alt="موزاييك ديكور - Mosaic Decor" width="437" height="589">
+  <img src="assets/logo-hd.png" alt="موزاييك ديكور - Mosaic Decor" width="437" height="589">
 </header>
 
 <main>
