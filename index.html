@@ -24,7 +24,7 @@
     --line:#E6E4DF;
     --gold-dark:#9C6A1E;
     --gold-light:#F2E28A;
-    --gold:linear-gradient(135deg,#9C6A1E 0%,#D8B65A 55%,#F2E28A 100%);
+    --gold:url("assets/gold.jpg") center/cover no-repeat;
     --paper:#FFFFFF;
     --wash:#F4F4F3;
   }
@@ -80,11 +80,10 @@
 
   .btn{
     display:block;width:100%;margin-top:36px;padding:16px;border:0;border-radius:6px;
-    background:var(--btn);color:#fff;cursor:pointer;
-    font:700 18px "El Messiri",sans-serif;
-    border-bottom:4px solid transparent;border-image:var(--gold) 1;
+    background:url("assets/gold.jpg") left bottom/100% 4px no-repeat var(--btn);color:#fff;cursor:pointer;
+    font:700 18px "El Messiri",sans-serif;padding-bottom:20px;
   }
-  @media (hover:hover){.btn:hover{background:#2A2D30}}
+  @media (hover:hover){.btn:hover{background-color:#2A2D30}}
 
   /* ---------- قائمة الاختيار ---------- */
   dialog.sheet{
